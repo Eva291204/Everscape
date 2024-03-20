@@ -30,4 +30,15 @@ public class GameManager : MonoBehaviour
     public bool Interact;
     public bool GetKey;
     public bool DoorOpen;
+
+    [SerializeField] GameObject _door;
+    private Animator _doorAnimator;
+    public void Start()
+    {
+        _doorAnimator = _door.GetComponent<Animator>();
+    }
+    public void OpenDoor()
+    {
+        _doorAnimator.SetBool("OpenDoor", true);
+    }
 }

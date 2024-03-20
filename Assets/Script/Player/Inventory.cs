@@ -42,7 +42,6 @@ public class Inventory : MonoBehaviour
         if (!_alreadyInInventory)
         {
             _inInventory.Add(newItem);
-            Debug.Log("new item in inventory");
             newItem.SetActive(false);
         }
         _alreadyInInventory = false;
