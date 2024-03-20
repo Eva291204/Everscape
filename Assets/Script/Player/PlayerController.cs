@@ -6,7 +6,12 @@ public class PlayerController : MonoBehaviour, PlayerInputController.IPlayerActi
     [SerializeField] private int _playerSpeed;
     private Vector3 _directionPlayer;
 
-    [SerializeField] private Interact _interact;
+    private Interact _interact;
+
+    public void Start()
+    {
+        _interact = GetComponent<Interact>();
+    }
 
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -20,7 +25,6 @@ public class PlayerController : MonoBehaviour, PlayerInputController.IPlayerActi
         }
         GameManager.Instance.Interact = true;
     }
-
     void Update()
     {
         gameObject.transform.Translate(_directionPlayer * (_playerSpeed * Time.deltaTime)); //player move

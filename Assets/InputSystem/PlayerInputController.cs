@@ -40,7 +40,7 @@ public partial class @PlayerInputController: IInputActionCollection2, IDisposabl
                     ""name"": ""Interact"",
                     ""type"": ""Value"",
                     ""id"": ""18936df3-c8a8-4b56-96ce-01c217a7712e"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
