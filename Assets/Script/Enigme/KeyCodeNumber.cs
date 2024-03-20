@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class KeyCodeNumber : MonoBehaviour
 {
-    [SerializeField] private List<int> _keyCode = new List<int>() { 0, 0, 0, 0 };
-    [SerializeField] private List<TextMeshProUGUI> _codeText = new List<TextMeshProUGUI>();
+    [SerializeField] public List<int> _keyCode = new List<int>() { 0, 0, 0, 0 }; //random code du coffre
+    [SerializeField] private List<TextMeshProUGUI> _codeText = new List<TextMeshProUGUI>(); //affichage du partie du code sur le coffre
 
-    private List<int> _code = new List<int>() { 0, 0, 0, 0 };
-    private List<int> _goodCode = new List<int>() { 0, 0, 0, 0 };
+    private List<int> _code = new List<int>() { 0, 0, 0, 0 }; //int relier au text --> changement de chiffre
+    private List<int> _goodCode = new List<int>() { 0, 0, 0, 0 }; //partie du code bon
 
     private bool _codeTrue1, _codeTrue2, _codeTrue3,_codeTrue4;
 
@@ -18,14 +18,20 @@ public class KeyCodeNumber : MonoBehaviour
     [SerializeField] private GameObject _coffreClose;
     [SerializeField] private GameObject _coffreOpen;
     [SerializeField] private Animator _animator;
+
+    private IndiceCode _indiceCode;
     public void Start()
     {
+        _indiceCode = GetComponent<IndiceCode>();
         _canChangeCode = true;
+
         for (int i = 0; i < _keyCode.Count; i++)
         {
             int x = Random.Range(1, 9);
             _keyCode[i] = x;
         }
+
+        _indiceCode.PlaceIndice();
     }
     public void ChangeCode1()
     {
@@ -211,7 +217,7 @@ public class KeyCodeNumber : MonoBehaviour
 
     IEnumerator OpenChest()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         _coffreClose.SetActive(false);
         _coffreOpen.SetActive(true);
         _animator.SetBool("ShowReward", true);
