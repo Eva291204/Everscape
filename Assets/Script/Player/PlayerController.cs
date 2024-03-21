@@ -10,11 +10,19 @@ public class PlayerController : MonoBehaviour, PlayerInputController.IPlayerActi
     private AudioSource _audioSourceCoin;
     private Animator _animator;
 
+    private GameObject _defaultPose;
+    private GameObject _playerSprite;
+    private GameObject _playerSpriteLeft;
+
     public void Start()
     {
         _interact = GetComponent<Interact>();
-        _audioSourceCoin = GetComponent<AudioSource>(); 
-        _animator = GetComponent<Animator>();
+        _audioSourceCoin = GetComponent<AudioSource>();
+        _animator = GetComponentInChildren<Animator>();
+
+        _playerSprite = gameObject.transform.GetChild(0).gameObject;
+        _playerSpriteLeft = gameObject.transform.GetChild(1).gameObject;
+        _defaultPose = gameObject.transform.GetChild(2).gameObject;
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -31,7 +39,7 @@ public class PlayerController : MonoBehaviour, PlayerInputController.IPlayerActi
         }
         if (GameManager.Instance.CanZoom)
         {
-            if(GameManager.Instance.Zoom)
+            if (GameManager.Instance.Zoom)
             {
                 _interact.DeZoomItem();
             }
@@ -40,11 +48,11 @@ public class PlayerController : MonoBehaviour, PlayerInputController.IPlayerActi
                 _interact.ZoomItem();
             }
         }
-        if(GameManager.Instance.GetKey)
+        if (GameManager.Instance.GetKey)
         {
             GameManager.Instance.DoorOpen = true;
         }
-        
+
     }
     void Update()
     {
@@ -52,15 +60,28 @@ public class PlayerController : MonoBehaviour, PlayerInputController.IPlayerActi
         {
             gameObject.transform.Translate(_directionPlayer * (_playerSpeed * Time.deltaTime)); //player move
         }
-        //if(Input.GetKeyDown("D"))
-        //{
-        //    _animator.SetBool("IsWalk", true);
+    }
 
-        //}
-        //if(Input.GetKeyDown("A") || Input.GetKeyDown("Q"))
-        //{
-        //    _animator.SetBool("IsWalk", true);
+    public void AnimationMove()
+    {
+        if(_directionPlayer.x < 0)
+        {
+            _animator.SetBool("IsWalkLeft", true);
+            _animator.SetBool("IsWalk", false);
 
-        //}
+            _playerSprite.transform.rotation = _playerSpriteLeft.transform.rotation;
+        }
+        if(_directionPlayer.x > 0)
+        {
+            _animator.SetBool("IsWalk", true);
+            _animator.SetBool("IsWalkLeft", false);
+
+            _playerSprite.transform.rotation = _defaultPose.transform.rotation;
+        }
+        if(_directionPlayer == Vector3.zero) 
+        {
+            _animator.SetBool("IsWalk", false);
+            _animator.SetBool("IsWalkLeft", false);
+        }
     }
 }
