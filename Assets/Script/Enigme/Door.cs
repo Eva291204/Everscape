@@ -7,9 +7,9 @@ public class Door : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
     }
-    public void OnTriggerEnter(Collider collsion)
+    public void OnTriggerEnter(Collider collider)
     {
-        if(GameManager.Instance.GetKey && GameManager.Instance.Interact)
+        if (GameManager.Instance.DoorOpen)
         {
             _animator.SetBool("OpenDoor", true);
             GameManager.Instance.GetKey = false;

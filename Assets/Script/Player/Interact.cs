@@ -5,6 +5,7 @@ public class Interact : MonoBehaviour
     public GameObject Item;
 
     private ZoomItem _zoomItem;
+    private Animator _animator;
 
     public void OnTriggerEnter(Collider collision)
     {
@@ -18,6 +19,11 @@ public class Interact : MonoBehaviour
             GameManager.Instance.CanZoom = true;
             _zoomItem = collision.GetComponent<ZoomItem>();
         }
+        if(collision.CompareTag("Feuille"))
+        {
+            _animator = collision.GetComponent<Animator>();
+            _animator.SetBool("Depop",true);
+        }
     }
 
     public void OnTriggerExit(Collider collision)
@@ -25,6 +31,10 @@ public class Interact : MonoBehaviour
         if (collision.CompareTag("PickItem") || collision.CompareTag("Key"))
         {
             GameManager.Instance.CanPickUpItem = false;
+        }
+        if(collision.CompareTag("ZoomItem"))
+        {
+            GameManager.Instance.CanZoom = false;
         }
     }
 
@@ -35,12 +45,10 @@ public class Interact : MonoBehaviour
 
     public void ZoomItem()
     {
-        GameManager.Instance.Zoom = true;
         _zoomItem.OnInteract();
     }
     public void DeZoomItem()
     {
-        GameManager.Instance.Zoom = false;
         _zoomItem.OnReInteract();
     }
 }
