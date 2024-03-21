@@ -27,13 +27,12 @@ public class GameManager : MonoBehaviour
     }
 
     public bool CanPickUpItem;
-    public bool Interact;
     public bool GetKey;
     public bool DoorOpen;
     public bool CanZoom;
     public bool Zoom;
 
-    [SerializeField] GameObject _door;
+    [SerializeField] public GameObject _door;
     private Animator _doorAnimator;
     public void Start()
     {

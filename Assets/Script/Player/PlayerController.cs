@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour, PlayerInputController.IPlayerActi
     public void OnInteract(InputAction.CallbackContext context)
     {
         _audioSourceCoin.Play();
+
         if (GameManager.Instance.CanPickUpItem)
         {
             _interact.PickUpItem();
@@ -37,7 +38,11 @@ public class PlayerController : MonoBehaviour, PlayerInputController.IPlayerActi
                 _interact.ZoomItem();
             }
         }
-        GameManager.Instance.Interact = true;
+        if(GameManager.Instance.GetKey)
+        {
+            GameManager.Instance.DoorOpen = true;
+        }
+        
     }
     void Update()
     {
