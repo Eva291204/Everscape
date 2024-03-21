@@ -18,6 +18,7 @@ public class KeyCodeNumber : MonoBehaviour
     [SerializeField] private GameObject _coffreClose;
     [SerializeField] private GameObject _coffreOpen;
     [SerializeField] private Animator _animator;
+    [SerializeField] private int _maxRandom;
 
     private IndiceCode _indiceCode;
     public void Start()
@@ -29,7 +30,7 @@ public class KeyCodeNumber : MonoBehaviour
         int w = 0;
         for (int i = 0; i < 4; w++)
         {
-            int x = Random.Range(1, 9);
+            int x = Random.Range(0, _maxRandom);
 
             if (x != y && x != z)
             {
