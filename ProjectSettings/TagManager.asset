@@ -8,6 +8,7 @@ TagManager:
   - PickItem
   - ZoomItem
   - PushItem
+  - Feuille
   layers:
   - Default
   - TransparentFX

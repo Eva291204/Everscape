@@ -45,7 +45,6 @@ public class KeyCodeNumber : MonoBehaviour
     }
     public void ChangeCode1()
     {
-        Debug.Log("rcftybhj");
         if (_canChangeCode)
         {
             if (_code[0] < 9)
@@ -232,5 +231,9 @@ public class KeyCodeNumber : MonoBehaviour
         _coffreClose.SetActive(false);
         _coffreOpen.SetActive(true);
         _animator.SetBool("ShowReward", true);
+        GameManager.Instance.GetKey = true;
+        yield return new WaitForSeconds(3);
+        _animator.SetBool("ShowReward", false);
+        GameManager.Instance.Zoom = false;
     }
 }

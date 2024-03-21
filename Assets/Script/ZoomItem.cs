@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ZoomItem : MonoBehaviour
@@ -7,10 +6,12 @@ public class ZoomItem : MonoBehaviour
 
     public void OnInteract()
     {
+        GameManager.Instance.Zoom = true;
         _animator.SetBool("Zoom", true);
     }
     public void OnReInteract()
     {
+        GameManager.Instance.Zoom = false;
         _animator.SetBool("Zoom", false);
     }
 }
