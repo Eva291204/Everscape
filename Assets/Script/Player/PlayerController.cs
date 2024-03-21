@@ -8,11 +8,13 @@ public class PlayerController : MonoBehaviour, PlayerInputController.IPlayerActi
 
     private Interact _interact;
     private AudioSource _audioSourceCoin;
+    private Animator _animator;
 
     public void Start()
     {
         _interact = GetComponent<Interact>();
         _audioSourceCoin = GetComponent<AudioSource>(); 
+        _animator = GetComponent<Animator>();
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -50,5 +52,15 @@ public class PlayerController : MonoBehaviour, PlayerInputController.IPlayerActi
         {
             gameObject.transform.Translate(_directionPlayer * (_playerSpeed * Time.deltaTime)); //player move
         }
+        //if(Input.GetKeyDown("D"))
+        //{
+        //    _animator.SetBool("IsWalk", true);
+
+        //}
+        //if(Input.GetKeyDown("A") || Input.GetKeyDown("Q"))
+        //{
+        //    _animator.SetBool("IsWalk", true);
+
+        //}
     }
 }
