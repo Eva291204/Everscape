@@ -5,8 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Key
-  - PushItem
   - PickItem
+  - ZoomItem
+  - PushItem
   layers:
   - Default
   - TransparentFX
