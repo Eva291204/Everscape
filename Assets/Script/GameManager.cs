@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
@@ -33,17 +34,24 @@ public class GameManager : MonoBehaviour
     public bool Zoom;
     public bool GetMiniKey;
     public int NumberDetectObject;
+    public int NeedNumberDetect;
 
-    [SerializeField] public GameObject _door;
+    [SerializeField] public List<GameObject> _door = new List<GameObject>();
     public Animator _doorAnimator;
-    public void Start()
-    {
-        _doorAnimator = _door.GetComponent<Animator>();
-    }
+    
     public void OpenDoor()
     {
-        if (NumberDetectObject == 2)
+        if (NumberDetectObject == NeedNumberDetect)
         {
+            _doorAnimator = _door[0].GetComponent<Animator>();
+            _doorAnimator.SetBool("OpenDoor", true);
+        }
+    }
+    public void OpenDoor2()
+    {
+        if (NumberDetectObject == NeedNumberDetect)
+        {
+            _doorAnimator = _door[1].GetComponent<Animator>();
             _doorAnimator.SetBool("OpenDoor", true);
         }
     }
