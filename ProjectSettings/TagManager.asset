@@ -9,6 +9,7 @@ TagManager:
   - ZoomItem
   - PushItem
   - Feuille
+  - MiniKey
   layers:
   - Default
   - TransparentFX

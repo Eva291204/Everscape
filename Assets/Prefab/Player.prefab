@@ -274,6 +274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Item: {fileID: 0}
+  ChestName: Coffre
 --- !u!82 &260555195804576001
 AudioSource:
   m_ObjectHideFlags: 0

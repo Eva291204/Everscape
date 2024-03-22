@@ -8,11 +8,12 @@ public class IndiceCode : MonoBehaviour
     [SerializeField] private GameObject _noteCode;
 
     private KeyCodeChest _keyCodeChest;
+    [SerializeField] private int _maxIndices;
     public void Start()
     {
         _keyCodeChest = GetComponent<KeyCodeChest>();
         
-        for (int i = 0;  i < 10; i++)
+        for (int i = 0;  i < _maxIndices; i++)
         {
             _indicesList.Add(_noteCode.transform.GetChild(i).gameObject);
         }

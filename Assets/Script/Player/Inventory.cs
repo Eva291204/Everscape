@@ -44,6 +44,11 @@ public class Inventory : MonoBehaviour
             _inInventory.Add(newItem);
             newItem.SetActive(false);
             GameManager.Instance.CanPickUpItem = false;
+
+            if (newItem.CompareTag("MiniKey"))
+            {
+                GameManager.Instance.GetMiniKey = true;
+            }
         }
         _alreadyInInventory = false;
 

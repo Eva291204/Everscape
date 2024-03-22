@@ -16,39 +16,11 @@ public class KeyCodeDoor : MonoBehaviour
 
     private bool _canChangeCode;
 
-    //[SerializeField] private Animator _animator;
-    [SerializeField] private int _maxRandom;
-    [SerializeField] private bool _sameColor;
+    [SerializeField] private Animator _animator;
 
-    private IndiceCode _indiceCode;
     public void Start()
     {
         _canChangeCode = true;
-
-        if (!_sameColor)
-        {
-            _indiceCode = GetComponent<IndiceCode>();
-            //int y = 0;
-            //int z = 0;
-            //int w = 0;
-            //int a = 0;
-
-            //for (int i = 0; i < 4; a++)
-            //{
-            //    int x = Random.Range(0, _maxRandom);
-
-            //    if (x != y && x != z && x != w)
-            //    {
-            //        _colorCode[i] = x;
-            //        w = z;
-            //        z = y;
-            //        y = x;
-            //        i++;
-            //    }
-            //}
-
-            _indiceCode.PlaceIndice();
-        }
     }
     public void ChangeCode1()
     {
@@ -57,7 +29,7 @@ public class KeyCodeDoor : MonoBehaviour
             _color = _allColor[_colorUI[0]];
             _imageColor[0].color = _color;
 
-            if (_colorUI[0] < 3)
+            if (_colorUI[0] < _allColor.Count-1)
             {
                 _colorUI[0]++;
             }
@@ -88,7 +60,7 @@ public class KeyCodeDoor : MonoBehaviour
             _color = _allColor[_colorUI[1]];
             _imageColor[1].color = _color;
 
-            if (_colorUI[1] < 3)
+            if (_colorUI[1] < _allColor.Count-1)
             {
                 _colorUI[1]++;
             }
@@ -104,7 +76,7 @@ public class KeyCodeDoor : MonoBehaviour
 
             if (_codeTrue2)
             {
-                if (_color != _colorCode[0])
+                if (_color != _colorCode[1])
                 {
                     _codeTrue2 = false;
                 }
@@ -119,7 +91,7 @@ public class KeyCodeDoor : MonoBehaviour
             _color = _allColor[_colorUI[2]];
             _imageColor[2].color = _color;
 
-            if (_colorUI[2] < 3)
+            if (_colorUI[2] < _allColor.Count - 1)
             {
                 _colorUI[2]++;
             }
@@ -150,7 +122,7 @@ public class KeyCodeDoor : MonoBehaviour
             _color = _allColor[_colorUI[3]];
             _imageColor[3].color = _color;
 
-            if (_colorUI[3] < 3)
+            if (_colorUI[3] < _allColor.Count-1)
             {
                 _colorUI[3]++;
             }
@@ -189,8 +161,9 @@ public class KeyCodeDoor : MonoBehaviour
     IEnumerator OpenCadenas()
     {
         yield return new WaitForSeconds(1);
-
-        yield return new WaitForSeconds(3);
+        _animator.SetBool("Zoom", false);
+        yield return new WaitForSeconds(2);
+        GameManager.Instance._doorAnimator.SetBool("OpenDoor", true );
         GameManager.Instance.Zoom = false;
     }
 }
