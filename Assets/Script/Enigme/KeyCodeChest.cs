@@ -3,7 +3,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
-public class KeyCodeNumber : MonoBehaviour
+public class KeyCodeChest : MonoBehaviour
 {
     [SerializeField] public List<int> _keyCode = new List<int>() { 0, 0, 0, 0 }; //random code du coffre
     [SerializeField] private List<TextMeshProUGUI> _codeText = new List<TextMeshProUGUI>(); //affichage du partie du code sur le coffre
@@ -11,14 +11,15 @@ public class KeyCodeNumber : MonoBehaviour
     private List<int> _code = new List<int>() { 0, 0, 0, 0 }; //int relier au text --> changement de chiffre
     private List<int> _goodCode = new List<int>() { 0, 0, 0, 0 }; //partie du code bon
 
-    private bool _codeTrue1, _codeTrue2, _codeTrue3, _codeTrue4;
+    [SerializeField] private bool _codeTrue1, _codeTrue2, _codeTrue3, _codeTrue4;
 
     private bool _canChangeCode;
 
-    [SerializeField] private GameObject _coffreClose;
-    [SerializeField] private GameObject _coffreOpen;
+    [SerializeField] private GameObject _coffreCloseUI;
+    [SerializeField] private GameObject _coffreOpenUI;
     [SerializeField] private Animator _animator;
     [SerializeField] private int _maxRandom;
+    [SerializeField] private GameObject _coffresMap;
 
     private IndiceCode _indiceCode;
     public void Start()
@@ -28,18 +29,20 @@ public class KeyCodeNumber : MonoBehaviour
         int y = 0;
         int z = 0;
         int w = 0;
-        for (int i = 0; i < 4; w++)
+        int a = 0;
+
+        for (int i = 0; i < 4; a++)
         {
             int x = Random.Range(0, _maxRandom);
 
-            if (x != y && x != z)
+            if (x != y && x != z && x != w)
             {
                 _keyCode[i] = x;
+                w = z;
                 z = y;
                 y = x;
                 i++;
             }
-            
         }
 
         _indiceCode.PlaceIndice();
@@ -229,10 +232,14 @@ public class KeyCodeNumber : MonoBehaviour
     IEnumerator OpenChest()
     {
         yield return new WaitForSeconds(1);
-        _coffreClose.SetActive(false);
-        _coffreOpen.SetActive(true);
+        _coffreCloseUI.SetActive(false);
+        _coffreOpenUI.SetActive(true);
+
         _animator.SetBool("ShowReward", true);
         GameManager.Instance.GetKey = true;
+        _coffresMap.transform.GetChild(0).gameObject.SetActive(false);
+        _coffresMap.transform.GetChild(1).gameObject.SetActive(true);
+
         yield return new WaitForSeconds(3);
         _animator.SetBool("ShowReward", false);
         GameManager.Instance.Zoom = false;
