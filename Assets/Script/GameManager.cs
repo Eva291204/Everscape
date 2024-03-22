@@ -36,15 +36,22 @@ public class GameManager : MonoBehaviour
     public int NumberDetectObject;
     public int NeedNumberDetect;
 
+
     [SerializeField] public List<GameObject> _door = new List<GameObject>();
     public Animator _doorAnimator;
-    
+
+    public void Start()
+    {
+        _doorAnimator = _door[0].GetComponent<Animator>();
+    }
+
     public void OpenDoor()
     {
         if (NumberDetectObject == NeedNumberDetect)
         {
             _doorAnimator = _door[0].GetComponent<Animator>();
             _doorAnimator.SetBool("OpenDoor", true);
+            NumberDetectObject = 0;
         }
     }
     public void OpenDoor2()
@@ -53,6 +60,7 @@ public class GameManager : MonoBehaviour
         {
             _doorAnimator = _door[1].GetComponent<Animator>();
             _doorAnimator.SetBool("OpenDoor", true);
+            NumberDetectObject = 0;
         }
     }
 

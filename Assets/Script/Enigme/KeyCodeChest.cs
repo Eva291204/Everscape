@@ -44,7 +44,6 @@ public class KeyCodeChest : MonoBehaviour
                 i++;
             }
         }
-
         _indiceCode.PlaceIndice();
     }
     public void ChangeCode1()

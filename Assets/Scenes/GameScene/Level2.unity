@@ -13324,6 +13324,10 @@ PrefabInstance:
       propertyPath: _door
       value: 
       objectReference: {fileID: 521798504}
+    - target: {fileID: 5682618885980317189, guid: 76e3f53ae3b804a4681166309480dc43, type: 3}
+      propertyPath: _door.Array.data[0]
+      value: 
+      objectReference: {fileID: 521798504}
     - target: {fileID: 6216523606326989127, guid: 76e3f53ae3b804a4681166309480dc43, type: 3}
       propertyPath: m_LocalPosition.x
       value: 34.6

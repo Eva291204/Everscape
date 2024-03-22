@@ -3,21 +3,38 @@ using UnityEngine.SceneManagement;
 
 public class GameSound : MonoBehaviour
 {
-    [SerializeField] private AudioSource _audioSource;
-    [SerializeField] private Scene _sceneName;
-    void Start()
+    private static GameSound _instanceSound;
+    public static GameSound Instance
+    {
+        get
+        {
+            if (_instanceSound == null)
+            {
+                Debug.Log("GameSound is null");
+            }
+            return _instanceSound;
+        }
+    }
+    public void Awake()
+    {
+        if (_instanceSound != null)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _instanceSound = this;
+        }
+    }
+
+    [SerializeField] public AudioSource _audioSource;
+    public bool changeSound;
+    public Scene ActiveScene;
+
+    public void Start()
     {
         DontDestroyOnLoad(gameObject);
         _audioSource.GetComponent<AudioSource>();
-    }
-    public void Update()
-    {
-        _sceneName = SceneManager.GetActiveScene();
-
-        if (_sceneName.name == "Menu" || _sceneName.name == "Credits")
-        {
-            _audioSource.Stop();
-        }
-        else { _audioSource.Play();}
+        _audioSource.Play();
     }
 }

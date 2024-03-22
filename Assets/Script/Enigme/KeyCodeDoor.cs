@@ -17,6 +17,7 @@ public class KeyCodeDoor : MonoBehaviour
     private bool _canChangeCode;
 
     [SerializeField] private Animator _animator;
+    [SerializeField] private int _doorNumber;
 
     public void Start()
     {
@@ -163,7 +164,7 @@ public class KeyCodeDoor : MonoBehaviour
         yield return new WaitForSeconds(1);
         _animator.SetBool("Zoom", false);
         yield return new WaitForSeconds(2);
-        GameManager.Instance._doorAnimator.SetBool("OpenDoor", true );
+        GameManager.Instance._door[_doorNumber].GetComponent<Animator>().SetBool("OpenDoor", true );
         GameManager.Instance.Zoom = false;
     }
 }
