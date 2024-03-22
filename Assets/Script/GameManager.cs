@@ -31,15 +31,21 @@ public class GameManager : MonoBehaviour
     public bool DoorOpen;
     public bool CanZoom;
     public bool Zoom;
+    public bool GetMiniKey;
+    public int NumberDetectObject;
 
     [SerializeField] public GameObject _door;
-    private Animator _doorAnimator;
+    public Animator _doorAnimator;
     public void Start()
     {
         _doorAnimator = _door.GetComponent<Animator>();
     }
     public void OpenDoor()
     {
-        _doorAnimator.SetBool("OpenDoor", true);
+        if (NumberDetectObject == 2)
+        {
+            _doorAnimator.SetBool("OpenDoor", true);
+        }
     }
+
 }

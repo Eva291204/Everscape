@@ -3639,11 +3639,11 @@ Transform:
   m_GameObject: {fileID: 174316768}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.41, y: -2.95, z: 0}
+  m_LocalPosition: {x: -1.6705933, y: 1.406, z: 0.16038296}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1339710568}
+  m_Father: {fileID: 688555508}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &174316770
 SpriteRenderer:
@@ -9936,7 +9936,8 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 327989790657468238, guid: ab91c879fc421fb40a11507a4affc429, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -13156,6 +13157,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2137930006}
     - target: {fileID: 760261713154713362, guid: 76e3f53ae3b804a4681166309480dc43, type: 3}
+      propertyPath: _maxIndices
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 760261713154713362, guid: 76e3f53ae3b804a4681166309480dc43, type: 3}
       propertyPath: _indicesList.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -13524,6 +13529,7 @@ Transform:
   - {fileID: 579697574}
   - {fileID: 1819064434}
   - {fileID: 521798503}
+  - {fileID: 174316769}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &691709849
@@ -24428,7 +24434,6 @@ Transform:
   - {fileID: 671345983}
   - {fileID: 612965248}
   - {fileID: 251917330}
-  - {fileID: 174316769}
   m_Father: {fileID: 1699693388}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1340507243

@@ -6,6 +6,7 @@ public class DetectObject : MonoBehaviour
     {
         if (collider.CompareTag("PushItem"))
         {
+            GameManager.Instance.NumberDetectObject++;
             GameManager.Instance.OpenDoor();
         }
     }

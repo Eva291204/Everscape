@@ -18,8 +18,8 @@ public class KeyCodeChest : MonoBehaviour
     [SerializeField] private GameObject _coffreCloseUI;
     [SerializeField] private GameObject _coffreOpenUI;
     [SerializeField] private Animator _animator;
-    [SerializeField] private int _maxRandom;
     [SerializeField] private GameObject _coffresMap;
+    [SerializeField] private int _maxRandom;
 
     private IndiceCode _indiceCode;
     public void Start()
@@ -229,14 +229,17 @@ public class KeyCodeChest : MonoBehaviour
         }
     }
 
-    IEnumerator OpenChest()
+    public IEnumerator OpenChest()
     {
         yield return new WaitForSeconds(1);
         _coffreCloseUI.SetActive(false);
         _coffreOpenUI.SetActive(true);
 
         _animator.SetBool("ShowReward", true);
+
         GameManager.Instance.GetKey = true;
+        GameManager.Instance.GetMiniKey = false;
+
         _coffresMap.transform.GetChild(0).gameObject.SetActive(false);
         _coffresMap.transform.GetChild(1).gameObject.SetActive(true);
 
