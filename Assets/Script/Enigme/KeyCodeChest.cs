@@ -22,6 +22,7 @@ public class KeyCodeChest : MonoBehaviour
     [SerializeField] private int _maxRandom;
 
     private IndiceCode _indiceCode;
+    
     public void Start()
     {
         _indiceCode = GetComponent<IndiceCode>();
@@ -44,7 +45,7 @@ public class KeyCodeChest : MonoBehaviour
                 i++;
             }
         }
-        _indiceCode.PlaceIndice();
+        _indiceCode.AddIndices();
     }
     public void ChangeCode1()
     {

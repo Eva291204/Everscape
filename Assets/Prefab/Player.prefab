@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eab5305093b0e54589e941d9ad203c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerSpeed: 5
+  _playerSpeed: 400
 --- !u!114 &3174264766169026570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -390,8 +390,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 6.25762, y: 4.672408, z: 10}
-  m_Center: {x: -0.3398466, y: -2.287734, z: 0}
+  m_Size: {x: 4.1167855, y: 4.290138, z: 10}
+  m_Center: {x: -0.2888739, y: -2.4788907, z: 0}
 --- !u!95 &1348144838280917416
 Animator:
   serializedVersion: 5

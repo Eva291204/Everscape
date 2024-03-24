@@ -4,6 +4,8 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour, PlayerInputController.IPlayerActions
 {
     [SerializeField] private int _playerSpeed;
+
+    private Rigidbody _rb;
     private Vector3 _directionPlayer;
 
     private Interact _interact;
@@ -16,6 +18,7 @@ public class PlayerController : MonoBehaviour, PlayerInputController.IPlayerActi
 
     public void Start()
     {
+        _rb = GetComponent<Rigidbody>();
         _interact = GetComponent<Interact>();
         _audioSourceCoin = GetComponent<AudioSource>();
         _animator = GetComponentInChildren<Animator>();
@@ -58,20 +61,21 @@ public class PlayerController : MonoBehaviour, PlayerInputController.IPlayerActi
     {
         if (!GameManager.Instance.Zoom)
         {
-            gameObject.transform.Translate(_directionPlayer * (_playerSpeed * Time.deltaTime)); //player move
+            _rb.velocity = _directionPlayer * (_playerSpeed * Time.deltaTime); 
+            //gameObject.transform.Translate(_directionPlayer * (_playerSpeed * Time.deltaTime)); //player move
         }
     }
 
     public void AnimationMove()
     {
-        if(_directionPlayer.x < 0)
+        if(_directionPlayer.x < 0 || _directionPlayer.y <0)
         {
             _animator.SetBool("IsWalkLeft", true);
             _animator.SetBool("IsWalk", false);
 
             _playerSprite.transform.rotation = _playerSpriteLeft.transform.rotation;
         }
-        if(_directionPlayer.x > 0)
+        if(_directionPlayer.x > 0 || _directionPlayer.y > 0)
         {
             _animator.SetBool("IsWalk", true);
             _animator.SetBool("IsWalkLeft", false);

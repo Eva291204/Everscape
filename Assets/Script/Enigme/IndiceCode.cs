@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class IndiceCode : MonoBehaviour
 {
@@ -9,14 +10,19 @@ public class IndiceCode : MonoBehaviour
 
     private KeyCodeChest _keyCodeChest;
     [SerializeField] private int _maxIndices;
-    public void Start()
+    [SerializeField] private bool _inChest;
+    [SerializeField] private GameObject _randomNoteInChest;
+    private int _keyCodeCount;
+
+    public void AddIndices()
     {
         _keyCodeChest = GetComponent<KeyCodeChest>();
-        
-        for (int i = 0;  i < _maxIndices; i++)
+
+        for (int i = 0; i < _maxIndices; i++)
         {
             _indicesList.Add(_noteCode.transform.GetChild(i).gameObject);
         }
+        PlaceIndice();
     }
     public void PlaceIndice()
     {
@@ -28,7 +34,13 @@ public class IndiceCode : MonoBehaviour
                 {
                     _indicesList[i].SetActive(true);
                     _indicesList[i].transform.position = _spawnPointIndices[j].transform.position;
+
+                    if (_inChest && j < _keyCodeChest._keyCode.Count)
+                    {
+                        _randomNoteInChest.GetComponent<Image>().sprite = _indicesList[i].GetComponent<Image>().sprite;
+                    }
                 }
+
             }
         }
     }

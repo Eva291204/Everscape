@@ -3632,8 +3632,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.4892397, y: 1.4892411, z: 0.2}
-  m_Center: {x: 0.16447115, y: 0.16447043, z: 0}
+  m_Size: {x: 1.1418403, y: 1.4892411, z: 0.2}
+  m_Center: {x: -0.009228763, y: 0.16447042, z: 0}
 --- !u!212 &75460782
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7064,8 +7064,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.4777098, y: 1.4839987, z: 0.2}
-  m_Center: {x: 0.17023616, y: 0.17337887, z: 0}
+  m_Size: {x: 1.1165208, y: 1.4839987, z: 0.2}
+  m_Center: {x: -0.010358509, y: 0.17337891, z: 0}
 --- !u!212 &180984543
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11102,7 +11102,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5139679529912353278, guid: 072e4505bca3c3b40b38207507a4137b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 749957185}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 072e4505bca3c3b40b38207507a4137b, type: 3}
 --- !u!4 &267986555 stripped
@@ -11974,8 +11977,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.5028677, y: 1.5028679, z: 0.2}
-  m_Center: {x: 0.15765715, y: 0.15765703, z: 0}
+  m_Size: {x: 1.5028677, y: 1.0420351, z: 0.2}
+  m_Center: {x: 0.15765715, y: -0.072759695, z: 0}
 --- !u!212 &288799687
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14692,7 +14695,7 @@ GameObject:
   - component: {fileID: 339969684}
   - component: {fileID: 339969685}
   m_Layer: 0
-  m_Name: "NotePi\xE8ge (1)"
+  m_Name: "NotePi\xE8ge"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14753,7 +14756,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: cc18914a4d297944ea69601a3900bdd0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -20900,8 +20903,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.4892397, y: 1.4892411, z: 0.2}
-  m_Center: {x: 0.16447115, y: 0.16447043, z: 0}
+  m_Size: {x: 1.4892397, y: 0.99909866, z: 0.2}
+  m_Center: {x: 0.16447115, y: -0.08060108, z: 0}
 --- !u!212 &475862359
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24454,7 +24457,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: cc18914a4d297944ea69601a3900bdd0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -28963,8 +28966,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.2099485, y: 2.099247, z: 0}
-  m_Center: {x: -0.031032085, y: 0.1405325, z: 0}
+  m_Size: {x: 1.2099485, y: 1.8374743, z: 0}
+  m_Center: {x: -0.031032098, y: 0.009645884, z: 0}
 --- !u!212 &623414479
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -31797,7 +31800,7 @@ Transform:
   m_GameObject: {fileID: 684432243}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071067, w: 0.7071069}
-  m_LocalPosition: {x: 28.4709, y: -12.7318, z: 0}
+  m_LocalPosition: {x: 28.4709, y: -12.7205, z: 0}
   m_LocalScale: {x: 0.03484561, y: 1.197168, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -31849,7 +31852,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 25.33608, y: 0.71394616}
+  m_Size: {x: 24.686844, y: 0.7139465}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -34280,6 +34283,90 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &749957184
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 749957185}
+  - component: {fileID: 749957186}
+  m_Layer: 0
+  m_Name: "NotePi\xE8ge"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &749957185
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749957184}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: -0.06, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 267986555}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &749957186
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749957184}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 3
+  m_Sprite: {fileID: 21300000, guid: cc18914a4d297944ea69601a3900bdd0, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.8181819, y: 1.8181819}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &753047457
 GameObject:
   m_ObjectHideFlags: 0
@@ -36118,8 +36205,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.2099485, y: 2.099247, z: 0}
-  m_Center: {x: -0.031032085, y: 0.1405325, z: 0}
+  m_Size: {x: 1.2099485, y: 1.9671369, z: 0}
+  m_Center: {x: -0.0310321, y: 0.07447726, z: 0}
 --- !u!212 &798592803
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -37484,6 +37571,7 @@ MonoBehaviour:
   _codeTrue3: 0
   _codeTrue4: 0
   _animator: {fileID: 1862120331}
+  _doorNumber: 0
 --- !u!1 &837712650
 GameObject:
   m_ObjectHideFlags: 0
@@ -40652,8 +40740,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.1751602, y: 1.8181823, z: 0}
-  m_Center: {x: 0.0153105855, y: 2.374923e-13, z: 0}
+  m_Size: {x: 1.0749367, y: 2.2209544, z: 0}
+  m_Center: {x: -0.0348012, y: -0.20138672, z: 0}
 --- !u!212 &900742751
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -52678,8 +52766,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.153202, y: 2.3447354, z: 0.2}
-  m_Center: {x: -0.0026607513, y: 0.26327682, z: 0}
+  m_Size: {x: 1.153202, y: 1.8028353, z: 0.2}
+  m_Center: {x: -0.0026607516, y: -0.0076738, z: 0}
 --- !u!212 &1172571082
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -58821,7 +58909,7 @@ Transform:
   m_GameObject: {fileID: 1327533085}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071067, w: 0.7071069}
-  m_LocalPosition: {x: 20.62, y: -9.6966, z: 0}
+  m_LocalPosition: {x: 20.6579, y: -9.7182, z: 0}
   m_LocalScale: {x: 0.03484561, y: 1.197168, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -58873,7 +58961,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 58.797985, y: 0.7458247}
+  m_Size: {x: 60.034992, y: 0.6825092}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -59015,8 +59103,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.153202, y: 2.3447354, z: 0.2}
-  m_Center: {x: -0.0026607513, y: 0.26327682, z: 0}
+  m_Size: {x: 1.153202, y: 2.6087592, z: 0.2}
+  m_Center: {x: -0.0026607516, y: 0.13126498, z: 0}
 --- !u!212 &1331766131
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -59685,8 +59773,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.1891747, y: 2.2411366, z: 0}
-  m_Center: {x: -0.0059337616, y: -0.21147728, z: 0}
+  m_Size: {x: 1.1891747, y: 2.5346503, z: 0}
+  m_Center: {x: -0.005933762, y: -0.0647192, z: 0}
 --- !u!212 &1343449416
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -62840,7 +62928,7 @@ GameObject:
   - component: {fileID: 1452870375}
   - component: {fileID: 1452870376}
   m_Layer: 0
-  m_Name: "NotePi\xE8ge (1)"
+  m_Name: "NotePi\xE8ge"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62901,7 +62989,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: cc18914a4d297944ea69601a3900bdd0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -72510,7 +72598,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 36.5165, y: 0.8404419}
+  m_Size: {x: 36.5165, y: 0.7951968}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -72525,7 +72613,7 @@ Transform:
   m_GameObject: {fileID: 1642159974}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.1957, y: -13.53, z: 0}
+  m_LocalPosition: {x: 10.1957, y: -13.5526, z: 0}
   m_LocalScale: {x: 1.0251564, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -75820,8 +75908,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.4895458, y: 1.1031985, z: 0}
-  m_Center: {x: 0.16431808, y: -0.055146933, z: 0}
+  m_Size: {x: 1.1660721, y: 1.5464307, z: 0}
+  m_Center: {x: 0.0025809426, y: 0.16646889, z: 0}
 --- !u!212 &1720824861
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -77021,7 +77109,7 @@ GameObject:
   - component: {fileID: 1756099296}
   - component: {fileID: 1756099297}
   m_Layer: 0
-  m_Name: "NotePi\xE8ge (1)"
+  m_Name: "NotePi\xE8ge"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77082,7 +77170,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: cc18914a4d297944ea69601a3900bdd0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -82171,6 +82259,103 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1875877489
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1875877493}
+  - component: {fileID: 1875877492}
+  - component: {fileID: 1875877491}
+  - component: {fileID: 1875877490}
+  m_Layer: 0
+  m_Name: ColliderZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1875877490
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875877489}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 46.043663, y: 4.715973, z: 5}
+  m_Center: {x: 21.254246, y: -13.644201, z: 0}
+--- !u!65 &1875877491
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875877489}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 46.043663, y: 7.657214, z: 5}
+  m_Center: {x: 21.254246, y: 12.151289, z: 0}
+--- !u!65 &1875877492
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875877489}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.587367, y: 30, z: 5}
+  m_Center: {x: -1.2063165, y: 0, z: 0}
+--- !u!4 &1875877493
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875877489}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1879002157
 GameObject:
   m_ObjectHideFlags: 0
@@ -88947,7 +89132,7 @@ GameObject:
   - component: {fileID: 2076258575}
   - component: {fileID: 2076258576}
   m_Layer: 0
-  m_Name: "NotePi\xE8ge (1)"
+  m_Name: "NotePi\xE8ge"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89008,7 +89193,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: cc18914a4d297944ea69601a3900bdd0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -89514,8 +89699,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.1322808, y: 1.8181819, z: 0}
-  m_Center: {x: 0.006997943, y: 1.4210855e-14, z: 0}
+  m_Size: {x: 1.1322808, y: 2.0792148, z: 0}
+  m_Center: {x: 0.006997916, y: -0.13051641, z: 0}
 --- !u!212 &2083753401
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -91888,3 +92073,4 @@ SceneRoots:
   - {fileID: 2093752284}
   - {fileID: 836287427}
   - {fileID: 969743886}
+  - {fileID: 1875877493}

@@ -40,7 +40,7 @@ public class Interact : MonoBehaviour
         {
             GameManager.Instance.CanPickUpItem = false;
         }
-        if (collision.CompareTag("ZoomItem"))
+        if (collision.CompareTag("ZoomItem") && GameManager.Instance.Zoom == false)
         {
             GameManager.Instance.CanZoom = false;
         }
